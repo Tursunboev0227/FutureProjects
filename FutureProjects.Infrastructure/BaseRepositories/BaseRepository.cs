@@ -1,3 +1,4 @@
+using FutureProjects.Application.Abstractions;
 using FutureProjects.Infrastructure.Persistance;
 using Microsoft.EntityFrameworkCore;
 using System;

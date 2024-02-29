@@ -1,3 +1,5 @@
+using FutureProjects.Application.Abstractions;
+using FutureProjects.Infrastructure.BaseRepositories;
 using FutureProjects.Infrastructure.Persistance;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -15,6 +17,8 @@ namespace FutureProjects.Infrastructure
                 options.UseNpgsql(conf.GetConnectionString("FutureProjectsConnectionString"));
 
             });
+
+            services.AddScoped<IUserRepository, UserRepository>();
             return services;
         }
     }
