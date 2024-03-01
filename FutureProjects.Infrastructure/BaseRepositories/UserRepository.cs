@@ -12,7 +12,7 @@ namespace FutureProjects.Infrastructure.BaseRepositories
 {
     public class UserRepository : BaseRepository<User>, IUserRepository
     {
-        public UserRepository(FutureProjectsDbContext context,DbSet<User> dbSet) :base(context, dbSet) 
+        public UserRepository(FutureProjectsDbContext context) :base(context, context.Set<User>()) 
         {
         }
     }
